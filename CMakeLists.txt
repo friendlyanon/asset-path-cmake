@@ -17,7 +17,7 @@ mark_as_advanced(gif_engine_INSTALL_CMAKEDIR)
 
 install(
     FILES asset.txt
-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/${package}"
+    DESTINATION "${CMAKE_INSTALL_DATADIR}/${package}"
     COMPONENT asset_Runtime
 )
 
@@ -30,7 +30,7 @@ install(
 
 install(CODE "\
   set(package [[${package}]])
-  set(datarootdir [[${CMAKE_INSTALL_DATAROOTDIR}]])
+  set(datadir [[${CMAKE_INSTALL_DATADIR}]])
   set(cmakedir [[${asset_INSTALL_CMAKEDIR}]])
 " COMPONENT asset_Development)
 
